@@ -39,3 +39,32 @@
 - CompoundComponents.jsx
 - StateLifting.jsx
 - PropDrillingSolution.jsx
+
+
+Beginner Level topics
+
+| Order | Topic                 | Description                   |
+| ----- | --------------------- | ----------------------------- |
+| 1️⃣   | Introduction to React | What is React, why use it     |
+| 2️⃣   | JSX                   | Embedding HTML in JS          |
+| 3️⃣   | Components            | Functional components & props |
+| 4️⃣   | Props vs State        | Data flow in components       |
+| 5️⃣   | useState Hook         | State management basics       |
+| 6️⃣   | Event Handling        | onClick, onChange             |
+| 7️⃣   | Conditional Rendering | Show/hide UI elements         |
+| 8️⃣   | Lists & Keys          | Rendering lists using map()   |
+| 9️⃣   | useEffect Hook        | Side effects (fetch, timers)  |
+| 🔟    | useRef Hook           | DOM reference handling        |
+
+Intermediate Level topics
+
+| Order | Topic                         | Description                        |
+| ----- | ----------------------------- | ---------------------------------- |
+| 1️⃣   | React Router                  | Navigation & routing               |
+| 2️⃣   | Context API                   | Global state without Redux         |
+| 3️⃣   | Custom Hooks                  | Reusable logic                     |
+| 4️⃣   | Forms & Validation            | Controlled/uncontrolled components |
+| 5️⃣   | useMemo / useCallback         | Performance optimization           |
+| 6️⃣   | Lifting State Up              | Data sharing between components    |
+| 7️⃣   | Error Boundaries              | Handling runtime errors            |
+| 8️⃣   | Code Splitting / Lazy Loading | Performance improvement            |

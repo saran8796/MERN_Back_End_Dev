@@ -10,9 +10,12 @@ const NavBar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex-shrink-0">
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                LOGO
+            <div className="flex items-center mb-4 md:mb-0">
+              <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center mr-3">
+                <span className="text-white font-bold">R</span>
+              </div>
+              <span className="text-xl font-bold text-blue-400">
+                React Practice
               </span>
             </div>
 
@@ -25,10 +28,22 @@ const NavBar = () => {
                 Home
               </Link>
               <Link
-                to="/formhandle"
+                to="/topics"
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300 hover:bg-gray-800"
               >
-                Form
+                Topics
+              </Link>
+              <Link
+                to="/projects"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300 hover:bg-gray-800"
+              >
+                Projects
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300 hover:bg-gray-800"
+              >
+                About
               </Link>
             </div>
           </div>
