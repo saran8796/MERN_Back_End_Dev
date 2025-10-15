@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping Statements</title>
+</head>
+<body>
+    <script>
+        const collobj = [{name : {firstName: "Kohsanar", lastName: "B"}, age: {currAge:21, dob:"20-11-2004"},
+                        course: "MERN Full Stack"},
+            {name : {firstName: "Saro", lastName: "A"}, age: {currAge:21, dob:"19-02-2004"},
+                        course: "Digital Marketting"},
+            {name : {firstName: "Dhina", lastName: "S"}, age: {currAge:21, dob:"02-09-2004"},
+                        course: "Digital Marketting"}
+        ]
+
+
+        // for in, for of, for each, for 
+
+        for(let i of collobj){
+            for(let key in i){
+                console.log(key,':', i[key]);   
+            }
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <script>
+        // Spread Operator -----------------------------------------------
+
+        // Before Spread Operator we use concat
+
+        const arr1 = [1,2,3,4,5,6,7];
+        const arr2 = [9,5,6,4,2,3,1];
+
+        const concatarr = arr1.concat(arr2);
+
+        console.log(concatarr);
+
+        // Using spread operator
+
+        const spreadarr = [...arr1, ...arr2];
+
+        console.log(spreadarr);
+
+        // string using spread operator
+
+        let str = "Hello World";
+
+        const spreadstr = [...str];
+
+        console.log(spreadstr);
+
+        // Using spread in the function arguments
+        
+        const sum = (a,b,c) => a+b+c;
+
+        const num = [1,2,6];
+
+        console.log('sum of the values: ',sum(...num));
+        
+        // Spread Operator in Objects
+
+        const person = {name: "kohsanar", age: 21, course: "MERN"};
+
+        const newPerson = {jobRole: "Developer", ...person};
+
+        console.log(newPerson);
+        
+        // Rest Operator -------------------------------------------------
+
+        const restoperator = (...arg) => arg;
+
+        console.log('Rest Operator Example: ', restoperator(1,2,3,4));
+        
+        
+        
+    </script>
+</body>
+</html>

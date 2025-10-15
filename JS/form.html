@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="form" value="hello">
+    </form>
+    
+    <script>
+        const formdata = document.getElementById("form");
+        formdata.addEventListener("input", (e) => {
+            console.log(e.target.value);
+            console.log(e.target);
+            
+            
+        });
+    </script>
+</body>
+</html>

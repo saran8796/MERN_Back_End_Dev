@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+        // Convert this function into an arrow function:
+    const  add = (a, b)=> { 
+        return a + b; 
+    }
+
+
+    // Given array = [2,4,6,8,10], use .map() to return each number doubled.
+    const arr=[2,4,6,8,10];
+    doubled = arr.map((e)=>e*e)
+    console.log(doubled);
+
+    // Write a program to count how many even numbers are in [1,2,3,4,5,6,7,8]
+    const num= [1,2,3,4,5,6,7,8];
+    let countEven=0;
+    num.forEach(e => {
+        if (e%2==0) {
+            countEven++;
+        }
+    });
+    console.log("Even number:", countEven);
+
+    // Given an object = { name: 'Sudhan', batch: 3, course: 'MERN' }, print all keys and values separately.
+    const obj={ name: 'Sudhan', batch: 3, course: 'MERN' };
+    for (const key in obj) {
+        console.log("key:",key,"& value:",obj[key]);
+    }
+
+    // Given array of objects employees = [{ name: 'A', salary: 20000 }, { name: 'B', salary: 40000 }, {name: 'C', salary: 35000 }], return names of employees earning more than 30,000.
+    const employees = [{ name: 'A', salary: 20000 }, { name: 'B', salary: 40000 }, {name: 'C', salary: 35000 }];
+    for (const e of employees) {
+        if (e.salary>30000) {
+            console.log(e.name);
+            
+        }
+    }
+
+
+    
+
+    //Write a program using for...of loop to find the largest number in [10,20,50,30]
+    const numbers =  [10,20,50,30];
+    let largest = 0;
+    for (const e of numbers) {
+        if (e>largest) {
+            largest = e;
+            
+        }
+    }
+    console.log("largest number:", largest);
+
+
+    // Write a function that takes an array [1,2,3,4,5] and returns only odd numbers
+    const odd = (arr)=>{
+        const oddNum = arr.filter((e)=>e%2==1)
+        return oddNum
+    }
+
+    console.log(odd([1,2,3,4,5]));
+
+    // Write a program to find factorial of a number using loop.
+    const factorial = (n)=>{
+        fact = [0,1]
+        for (let i = 2; i < n; i++) {
+            fact.push(fact[i-1]+fact[i-2])
+            
+        }
+        return fact
+    }
+    
+    console.log(factorial(10));
+    
+    // Write a program to count how many times 'a' occurs in 'banana'
+    const str = "banana";
+    let countA=0;
+    for (let i = 0; i < str.length; i++) {
+        if(str[i] == "a"){
+            countA++;
+        }
+    }
+
+    console.log(`Number of A in ${str} is ${countA}`);
+    
+
+    // Write a function sortNumbers(arr) that sorts [5,1,4,2,3] into ascending order.
+    const sortNumbers =(arr)=>{
+        const sorted = arr.sort((a,b)=>a-b)
+        return sorted
+    }
+
+    console.log(sortNumbers([5,1,4,2,3]));
+    
+    </script>
+</body>
+</html>

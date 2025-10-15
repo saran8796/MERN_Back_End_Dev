@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback Functions</title>
+  </head>
+  <body>
+    <script>
+      function greet(name, callback) {
+        setTimeout(callback, 1000);
+        console.log("Hi " + name);
+      }
+
+      function sayBye() {
+        console.log("Goodbye!");
+      }
+
+      // Passing sayBye as a callback
+      greet("Kohsanar", sayBye);
+    </script>
+  </body>
+</html>

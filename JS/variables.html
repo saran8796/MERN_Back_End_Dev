@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    
+    <script>
+        
+        // write examples using let and const, describing scoping rules and why to use each in real scenarios
+
+        //---------------------------------------------------------------------------------------------------
+        // let are used when the values are reassigned in an program and it cannot be redeclared
+
+        // the value of the i is changed dynamically
+
+        for (let i=0; i<5; i++){
+            console.log("i : ", i);
+        }
+
+        // the value of the k in the if block cannot be accessed outside
+
+        let k = 0;
+        if(k == 0){
+            let k = 5;
+            console.log("k :",k);
+        }
+        console.log(k);
+
+        //---------------------------------------------------------------------------------------------------
+        // const are used when the values are not changed and it cannot be redeclared and also reassigned
+        
+        const PI = 3.14;
+        let r = 6;
+
+        if(k == 0){
+            const circle = PI * r ** 2;
+
+            console.log(circle);
+        }
+
+        console.log(circle); // it show an reference error bcoz we cannot access the block scope variable in the outside of the block
+
+    </script>
+</body>
+</html>

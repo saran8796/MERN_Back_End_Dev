@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        // Nested Objects in JavaScript
+        
+        const obj = {name : {firstName: "Kohsanar", lastName: "Bharanidharan"}, age: {currAge:21, dob:"20-11-2004"},
+                        course: "MERN Full Stack"}
+
+        console.log("first name: ",obj.name.firstName);
+        
+        for(let key in obj){
+            console.log(key, obj[key])
+        }
+
+        // Collection of objects or Array of objects
+
+        const collobj = [{name : {firstName: "Kohsanar", lastName: "B"}, age: {currAge:21, dob:"20-11-2004"},
+                        course: "MERN Full Stack"},
+            {name : {firstName: "Saro", lastName: "A"}, age: {currAge:21, dob:"19-02-2004"},
+                        course: "Digital Marketting"},
+            {name : {firstName: "Dhina", lastName: "S"}, age: {currAge:21, dob:"02-09-2004"},
+                        course: "Digital Marketting"}
+        ]
+
+        for(let i in collobj){
+            console.log(collobj[i].name.firstName);
+        }
+        
+
+        // Object Freezing
+
+        const user = {courseName: "MERN", duration: "2 Months"}
+
+        Object.freeze(user);
+        user.courseName = "CCNA";
+
+        console.log("Object Freezing: ", user);
+        
+        
+        
+    </script>
+</body>
+</html>

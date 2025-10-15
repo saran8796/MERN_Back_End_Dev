@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    <script>
+        // write examples using closures in JavaScript
+
+        //---------------------------------------------------------------------------------------------------
+        // A closure is a function that retains access to its lexical scope, even when the function is executed outside that scope.
+
+        function outerFunction(outerVariable) {
+            return function innerFunction(innerVariable) {
+                console.log("Outer Variable: " + outerVariable);
+                console.log("Inner Variable: " + innerVariable);
+            };
+        }
+
+        const newFunction = outerFunction("outside");
+        newFunction("inside");
+
+        //---------------------------------------------------------------------------------------------------
+        // Another example of closure
+
+        function makeCounter() {
+            let count = 0; // count is a private variable
+
+            return function() {
+                count++; // inner function has access to count
+                return count;
+            };
+        }
+
+        const counter = makeCounter();
+
+        console.log(counter()); // 1
+        console.log(counter()); // 2
+        console.log(counter()); // 3
+
+        //---------------------------------------------------------------------------------------------------
+    </script>
+</body>
+</html>
