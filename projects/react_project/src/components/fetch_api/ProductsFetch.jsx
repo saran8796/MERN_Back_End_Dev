@@ -3,13 +3,22 @@ import { useEffect, useState } from "react";
 const ProductsFetch = () => {
   const [myproducts, setMyProducts] = useState([]);
   const [mysearch, setMySearch] = useState("");
+  const [mycategory, setMyCategory] = useState([]);
+  const [currcategory, setCurrCategory] = useState("");
+  const [sort, setSort] = useState("");
 
   const fetchAPI = async () => {
     try {
       const res = await fetch("https://dummyjson.com/products");
       const datas = await res.json();
       setMyProducts(datas.products);
-      console.log(datas.products);
+      // console.log(datas.products);
+      console.log(datas.products.sort((a, b) => a.price - b.price));
+
+      const cat = datas.products.map((e) => e.category);
+      const mycat = [...new Set(cat)];
+      setMyCategory(mycat);
+      // console.log(mycat);
     } catch (e) {
       console.log(e.message);
     }
@@ -20,12 +29,39 @@ const ProductsFetch = () => {
     setMySearch(e.target.value);
   };
 
-  const search = () => {
-    if (!mysearch) return myproducts;
+  const handleCat = (e) => {
+    setCurrCategory(e.target.value);
+  };
 
-    return myproducts.filter((e) =>
-      e.title.toLowerCase().includes(mysearch.toLocaleLowerCase())
-    );
+  const handleSort = (e) => {
+    setSort(e.target.value);
+  };
+
+  const search = () => {
+    const products = myproducts;
+
+    if (currcategory && search)
+      return products.filter(
+        (e) =>
+          e.category === currcategory &&
+          e.title.toLowerCase().includes(mysearch.toLocaleLowerCase())
+      );
+
+    if (currcategory)
+      return products.filter((e) => e.category === currcategory);
+
+    if (search)
+      return products.filter((e) =>
+        e.title.toLowerCase().includes(mysearch.toLocaleLowerCase())
+      );
+
+    if (sort === "LowToHigh") {
+      return products.sort((a, b) => a.price - b.price);
+    } else if (sort === "HighToLow") {
+      return products.sort((a, b) => b.price - a.price);
+    }
+
+    return products;
   };
 
   const searchedProduts = search();
@@ -33,6 +69,8 @@ const ProductsFetch = () => {
   useEffect(() => {
     fetchAPI();
   }, []);
+
+  console.log(sort);
 
   return (
     <>
@@ -42,6 +80,7 @@ const ProductsFetch = () => {
             Products Page
           </h1>
           <div className="flex justify-center mt-10">
+            {/* input search  */}
             <input
               type="text"
               name="search"
@@ -49,13 +88,33 @@ const ProductsFetch = () => {
               className="bg-white py-2 px-4 rounded-full text-black ring-gray-300 ring-2"
               placeholder="Search Products..."
             />
+
+            {/* Category search */}
+            <span className="inline-block ml-5 mt-2">Category</span>
             <select
-              name="filter"
+              defaultValue={""}
+              onChange={handleCat}
               className="text-black bg-white mx-5 rounded-full px-3 py-2 ring-2 ring-gray-300"
             >
-              <option value="select">Select</option>
-              <option value="electric">Electric</option>
-              <option value="beauty">Beauty</option>
+              <option value="">All</option>
+              {mycategory.length > 1 &&
+                mycategory.map((e, i) => (
+                  <option value={e} key={i}>
+                    {e}
+                  </option>
+                ))}
+            </select>
+
+            {/* sort search  */}
+            <span className="inline-block ml-5 mt-2">Sort By</span>
+            <select
+              defaultValue={""}
+              onChange={handleSort}
+              className="text-black bg-white mx-5 rounded-full px-3 py-2 ring-2 ring-gray-300"
+            >
+              <option value="">All</option>
+              <option value="LowToHigh">LowToHigh</option>
+              <option value="HighToLow">HighToLow</option>
             </select>
           </div>
           <div className="flex flex-wrap my-15 gap-8 justify-center">
@@ -64,7 +123,11 @@ const ProductsFetch = () => {
                 key={e.id}
                 className="bg-gray-300 p-8 text-black rounded-2xl flex-col"
               >
-                <img src={e.images} alt="empty" className="w-50" />
+                <img
+                  src={e.images.length <= 1 ? e.images : e.images[0]}
+                  alt="empty"
+                  className="w-50"
+                />
                 <h1 className="font-bold uppercase my-2">
                   {e.title.length > 20 ? e.title.slice(0, 16) + "..." : e.title}
                 </h1>

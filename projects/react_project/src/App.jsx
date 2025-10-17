@@ -12,7 +12,7 @@ function App() {
       <Routes>
         {/* Use `element` prop with JSX */}
         <Route path="/" element={<Hero />} />
-        <Route path="/topics" element={<Topics />} />
+        <Route path="/topics" element={<FormHandle />} />
         <Route path="/letterdis" element={<PermissionLetterDisplay />} />
       </Routes>
     </>
