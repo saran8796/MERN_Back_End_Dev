@@ -6,6 +6,7 @@ const ProductsFetch = () => {
   const [mycategory, setMyCategory] = useState([]);
   const [currcategory, setCurrCategory] = useState("");
   const [sort, setSort] = useState("");
+  const [cart, setCart] = useState(0);
 
   const fetchAPI = async () => {
     try {
@@ -13,7 +14,7 @@ const ProductsFetch = () => {
       const datas = await res.json();
       setMyProducts(datas.products);
       // console.log(datas.products);
-      console.log(datas.products.sort((a, b) => a.price - b.price));
+      // console.log(datas.products.sort((a, b) => a.price - b.price));
 
       const cat = datas.products.map((e) => e.category);
       const mycat = [...new Set(cat)];
@@ -37,28 +38,88 @@ const ProductsFetch = () => {
     setSort(e.target.value);
   };
 
+  const handleCart = () => {
+    setCart((e) => e + 1);
+  };
+
   const search = () => {
-    const products = myproducts;
+    let products = myproducts;
 
-    if (currcategory && search)
-      return products.filter(
-        (e) =>
-          e.category === currcategory &&
-          e.title.toLowerCase().includes(mysearch.toLocaleLowerCase())
-      );
+    if (currcategory || mysearch || sort) {
+      if (currcategory && mysearch && sort) {
+        if (sort === "LowToHigh") {
+          products = myproducts
+            .sort((a, b) => a.price - b.price)
+            .filter(
+              (e) =>
+                e.category === currcategory &&
+                e.title.toLowerCase().includes(mysearch.toLocaleLowerCase())
+            );
+        } else if (sort === "HighToLow") {
+          products = myproducts
+            .sort((a, b) => b.price - a.price)
+            .filter(
+              (e) =>
+                e.category === currcategory &&
+                e.title.toLowerCase().includes(mysearch.toLocaleLowerCase())
+            );
+        }
 
-    if (currcategory)
-      return products.filter((e) => e.category === currcategory);
+        return products;
+      } else if (currcategory && mysearch) {
+        products = myproducts.filter(
+          (e) =>
+            e.category === currcategory &&
+            e.title.toLowerCase().includes(mysearch.toLocaleLowerCase())
+        );
+        return products;
+      } else if (currcategory && sort) {
+        if (sort === "LowToHigh") {
+          products = myproducts
+            .sort((a, b) => a.price - b.price)
+            .filter((e) => e.category === currcategory);
+          console.log(sort);
+        } else if (sort === "HighToLow") {
+          products = myproducts
+            .sort((a, b) => b.price - a.price)
+            .filter((e) => e.category === currcategory);
+        }
+        return products;
+      } else if (mysearch && sort) {
+        if (sort === "LowToHigh") {
+          products = myproducts
+            .sort((a, b) => a.price - b.price)
+            .filter((e) =>
+              e.title.toLowerCase().includes(mysearch.toLocaleLowerCase())
+            );
+        } else if (sort === "HighToLow") {
+          products = myproducts
+            .sort((a, b) => b.price - a.price)
+            .filter((e) =>
+              e.title.toLowerCase().includes(mysearch.toLocaleLowerCase())
+            );
+        }
 
-    if (search)
-      return products.filter((e) =>
+        return products;
+      }
+    }
+
+    if (currcategory) {
+      products = myproducts.filter((e) => e.category === currcategory);
+      return products;
+    }
+
+    if (mysearch) {
+      products = myproducts.filter((e) =>
         e.title.toLowerCase().includes(mysearch.toLocaleLowerCase())
       );
+      return products;
+    }
 
     if (sort === "LowToHigh") {
-      return products.sort((a, b) => a.price - b.price);
+      products = myproducts.sort((a, b) => a.price - b.price);
     } else if (sort === "HighToLow") {
-      return products.sort((a, b) => b.price - a.price);
+      products = myproducts.sort((a, b) => b.price - a.price);
     }
 
     return products;
@@ -70,12 +131,17 @@ const ProductsFetch = () => {
     fetchAPI();
   }, []);
 
-  console.log(sort);
+  // console.log(sort);
 
   return (
     <>
       <div className="bg-gray-800 p-10 text-white">
         <div>
+          <h1 className="flex justify-end">
+            <button className="p-3 bg-blue-400 hover:scale-105 transition-all duration-300 rounded-full">
+              Cart : {cart}
+            </button>
+          </h1>
           <h1 className="text-center my-5 font-bold uppercase text-gray-300 text-3xl">
             Products Page
           </h1>
@@ -137,7 +203,10 @@ const ProductsFetch = () => {
                     : e.description}
                 </p>
                 <p className="my-2 font-bold">{"$" + e.price}</p>
-                <button className="bg-blue-600 cursor-pointer hover:transition-all duration-300 hover:scale-105 rounded px-4 py-2 text-white">
+                <button
+                  onClick={handleCart}
+                  className="bg-blue-600 cursor-pointer hover:transition-all duration-300 hover:scale-105 rounded px-4 py-2 text-white"
+                >
                   Add to Cart
                 </button>
               </div>

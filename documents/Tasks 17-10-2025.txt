@@ -1,0 +1,10 @@
+Task 1 17/10/2025
+
+step 1: video have to play
+step 2: after intrupt the video run ad
+step 3: run the timer in the ad 
+step 4: when the timer is finished again normally run the video
+step 5: when skip ad is clicked the ad should disable and the video resumes normally
+
+Task 2 
+
