@@ -1,0 +1,11 @@
+Higher Order component
+
+⦁	It is a function that takes a another component and returns the new component.
+⦁	It is a pattern to reuse logic across the component.
+⦁	Then it's add the extra behaviour of the component.
+⦁	Mostly used for Logging and analytics process, authentication guards, loading or data fetching, then permissions and role check.
+
+Outlet
+
+⦁	It is a special component from react-router-dom used to show nested routes inside the parent page.
+⦁	It is a placeholder 

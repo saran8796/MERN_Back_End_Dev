@@ -1,0 +1,36 @@
+Task 22/10/2025
+
+
+
+1\. Ref using type blue showing the blue color box
+
+2\. input value store to the localstorage
+
+3\. using state to showing the ref value
+
+4\. Ref using css style to apply and hsoing the display
+
+
+
+Task 23/10/2025
+
+
+
+1\. adv and dis 
+
+
+
+* useRef
+* useEffect
+* useState
+
+
+
+2\. while typing if milk show images using useRef().
+
+
+
+3\. textarea growing line.
+
+
+

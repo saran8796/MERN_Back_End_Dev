@@ -42,7 +42,7 @@ Q1: You have a list of products displayed on the screen. When a user clicks the 
 
 
 
-Answer: 
+Answer:
 
 * The cart count state lives in a common parent component (e.g., App), since both the products and header need access to it.
 * When "Add to Cart" is clicked, update the state using the function provided by useState.
@@ -54,14 +54,45 @@ Q2: A counter application increments the number each time a button is clicked. W
 
 
 
-Answer: 
+Answer:
 
 * In React, when a state variable created by useState updates, it causes the whole component to re-render because the UI needs to show the latest state.
 * If there are nested child components, all child components will also re-render unless they are optimized.
 
 
+-----------------------------------------------------------------------------------
 
 
+// interview questions - 28/10/2025
+
+1.	usereduce
+2. redex
+3. customhook
+4. HOC
+5. OUTLET
+6. LasyLoading
+7. some upgrade things in react
+
+
+-----------------------------------------------------------------------------------
+
+
+
+// interview Questions - 29/10/2025
+
+
+
+1. what is react performance optimization?
+
+2\. what are react hooks, adv, disadv, usage.
+
+3\. diff between useEffect, useMemo, useCallback, adv \& disadv, usages.
+
+4\. diff between state and useState.
+
+5\. what are props?
+
+6\. Is there any alternate methods for higher order component?
 
 
 

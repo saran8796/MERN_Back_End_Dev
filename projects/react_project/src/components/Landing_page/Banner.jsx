@@ -10,7 +10,7 @@ const Banner = () => {
             {/* Left Content */}
             <div className="md:w-1/2 mb-8 md:mb-0">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-                Master React Step-by-Step 🚀
+                Master React Step-by-Step
               </h1>
               <p className="text-xl mb-8 text-blue-100">
                 Learn essential React concepts with practical examples and

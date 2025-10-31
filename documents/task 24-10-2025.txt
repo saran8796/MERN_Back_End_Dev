@@ -1,0 +1,4 @@
+task 24/10/2025
+
+1. create a state from app and provide to any component
+2. having a tea shop, create a functions for each process for tea preparation, landing page with banner image of the tea shop.

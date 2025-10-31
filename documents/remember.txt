@@ -1,0 +1,21 @@
+1. ES6+ features, functions, objects, ternary operator, async await, closures, hooks.
+2. data types, keywords, scops, arrays, objects, nested objects, types of functions, closures, hoisting, promises methods, error handling - try catch.
+3. scops, let,const, var, hoisting, dom manipulation
+4. DOM concepts, state, react hooks, folder structure, import export.
+5. scops, data types, arrays, functions, error handling try catch, hooks.
+6. variables, data types, arrays, objects, spread operator, rest, react component structure, react router dom, tailwindcss import, hooks concept la state, useEffect.
+7. Es6+ features, map, filter, reduce, useEffect, useReduce, state.
+8. variable, data types, functions, react component creation, import export, map, filter, form handling, hooks, react router, dom manipulation, destructuring,.
+9. 
+10. variable, array, objects, array of object, json, async await, spread operator rest, react router dom, props.
+11. ES6+ features, data types, array, array of objects, react router dom, rendering, maps, filter, find, reduce.
+12. vaiable declaration, primitive, non-primitive, async await, error handling, file handling, components, props, useState, useEffect, useContext, fetchAPI.
+13. variable declaration, function, async await, closures, dom manipulate, react - component creating, hooks, react router dom, destructing, rendering method, higher order array methods.
+14. variable, data types, arrow functions, objects, array of objects, form handling, component creations, react rounter dom, hooks in react.
+15. variable declaration, initialization, 4 types of functions, local storate, event objects, react - component creation, useState, useEffect, useRef, async await
+16. variables, data types, functions, higher order array methods, rendering, destructions, hooks, props, fectch api, rendering
+17. variable, data types, functins, arrow functions, async await, fetch, array method, closure, callback, dom, react - component, useState, useEffect, useRef, useContext, props.
+18. vaiable, data types, functions, async await, react - compoents, fetch api, form validation.
+19. js - variables, data types, functions, template literals, import export, dom manipulation, event handling, react- useState useEffect, useContext, react router dom.
+20. variables, data types, import export, useEffect, useState, promises callbacks, clsouese, dom manipulation, async await.
+21. variable declarations, initialization, data types, primitive data types, and non- primitive, string , number, Boolean, three types of functions, callback, promises methods, array, object, event handling, dom, file handling, project setup, rendering methods, components, ES6+ features, array, object, multi components, props, basic four hooks, useState, useEffect, useRef, useContext, GitHub, try catch, fetch, higher order array methods, destructuring is important, http request, stringfy, json.stringfy, json.parse, mind.

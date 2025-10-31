@@ -34,6 +34,12 @@ const NavBar = () => {
                 Topics
               </Link>
               <Link
+                to="/tasks"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300 hover:bg-gray-800"
+              >
+                Tasks
+              </Link>
+              <Link
                 to="/projects"
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300 hover:bg-gray-800"
               >

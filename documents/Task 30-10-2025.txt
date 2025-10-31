@@ -1,0 +1,4 @@
+Task 30/10/2025
+
+1. I have a component, I want to use declared component and change something extra value added to change some behaviour.
+2. lazy loading syntax (suspense, fallback, lazy); write syntax 18 times.
