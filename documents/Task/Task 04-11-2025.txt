@@ -1,0 +1,5 @@
+Task 04-11-2025 (Day 2):
+
+Task 1: sync/async, what are all the process in the async.
+Task 2: 5 programs to write in the file and open the file using fs system
+Task 3: setTimeout and set Intervel create a Movie Making scence from SooraraiPotru.

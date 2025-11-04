@@ -5,7 +5,6 @@ import Banner from "../componets/Banner";
 const LandingPage = () => {
   return (
     <>
-      <NavBar />
       <Banner />
     </>
   );
