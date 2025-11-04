@@ -1,0 +1,3 @@
+Cmd for creating package.json :
+
+npm init -y

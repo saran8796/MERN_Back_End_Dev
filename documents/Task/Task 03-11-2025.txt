@@ -1,0 +1,10 @@
+Task 03-11-2025 (Day - 1 of Node)
+
+1. Why we use BackEnd?
+2. Server side rendering and Client side rendering
+3. can we use backend process in the react.
+4. What is CLI, why we use it?
+5. What is the Difference between Common JS(import and export) and ES6 modules(import and export).
+6. Definition of (npm init -y) this particular line.
+7. create three functions(each does in one process) in is file has one default export, and main file - import the and execute.
+8. Blocking I/O, Non Blocking I/O?
