@@ -1,3 +1,5 @@
+
+
 In programming, sync (synchronous) and async (asynchronous) refer to how operations are executed with respect to time and waiting.
 
 Synchronous (Sync)
@@ -11,3 +13,4 @@ Asynchronous (Async)
 Operations happen independently, allowing other tasks to run while waiting for some operations to complete.
 
 Useful for tasks that take time, like network requests, file I/O, or timers.
+
