@@ -1,0 +1,11 @@
+Task 10-11-2025
+
+1. Give request and get response by header,body,params,query.
+
+2. Make avengers team warrior name, warrior place, warrior super power, warrior experience - post
+
+3. Params - powerstone, solestone, minestone, timestone give id for each stone ( if we get id in req and give the stone and response)
+
+4. query - thanos=no_war planet=id
+
+5. headers - Wakanda id vibranium request.

@@ -57,8 +57,8 @@ const OurPartners = () => {
   });
 
   return (
-    <section className="py-16 bg-linear-to-br from-gray-50 to-blue-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-0 bg-blue-500">
+    <section className="py-16 lg:px-8 bg-linear-to-br from-gray-50 to-blue-50">
+      <div className="container mx-auto px-3">
         {/* Header Section */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">

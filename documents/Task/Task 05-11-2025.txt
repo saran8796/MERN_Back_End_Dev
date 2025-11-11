@@ -1,0 +1,19 @@
+Interview Questions:
+
+1. What’s the difference between path.join() and path.resolve()?
+2. How do you parse query parameters in Node.js?
+3. What’s the difference between synchronous and asynchronous fs methods?
+4. Why is nodemon used in backend development?
+5. What are the advantages of using process module?
+6. How to handle multiple routes using Node’s http module?
+
+Task:
+
+1. Create a backend server using http....server name leo movie booking.....
+Home Movies Booking Contact 
+(  read movies from a booking file  , show file path from a module , read the url query from the url, use fs module to fetch the data)
+Leoserver.js file
+Next data folder kulla
+First movies.txt file create panniko.
+
+2. Adv and disadv for fs,path,os,http.

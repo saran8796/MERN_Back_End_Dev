@@ -1,0 +1,6 @@
+Task 06-11-2025:
+
+1. Why Express JS is called as library and find what it is.
+2. Authentication and Authorization?
+3. Why we connect frontend and backend?
+4. What are the interactions we has in frontent?
