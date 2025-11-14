@@ -1,0 +1,8 @@
+Task 13-11-2025
+
+create a 12 api's
+
+1. four for insert
+2. four for get 
+3. two for params process
+4. two query string process

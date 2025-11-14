@@ -1,11 +1,16 @@
 import React from "react";
-import NavBar from "../componets/NavBar";
 import Banner from "../componets/Banner";
+import TopWorkers from "../componets/TopWorkers";
+import OurPartners from "../componets/OurPartners";
+import OurServices from "../componets/OurServices";
 
 const LandingPage = () => {
   return (
     <>
       <Banner />
+      <OurPartners />
+      <OurServices />
+      <TopWorkers />
     </>
   );
 };

@@ -1,0 +1,6 @@
+Task 12-11-2025
+
+1. What is schema
+2. Functions in mongoose and properties.
+3. What is 
+

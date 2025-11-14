@@ -94,14 +94,16 @@ const OurServices = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-12 lg:mt-16">
-          <button
-            onClick={() => onNavigate("all-services")}
-            className="bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl text-sm sm:text-base"
-          >
-            View All Services
-          </button>
-        </div>
+        {categories.length > 8 ?? (
+          <div className="text-center mt-12 lg:mt-16">
+            <button
+              onClick={() => onNavigate("all-services")}
+              className="bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl text-sm sm:text-base"
+            >
+              View All Services
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
